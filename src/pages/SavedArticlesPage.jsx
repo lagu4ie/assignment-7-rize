@@ -2,7 +2,8 @@ import ArticleCard from '../components/ArticleCard';
 import { useArticles } from '../context/ArticlesContext';
 
 function SavedArticlesPage() {
-  const { savedArticles } = useArticles();
+  const { getUserSavedArticles } = useArticles();
+  const savedArticles = getUserSavedArticles();
 
   return (
     <div>
